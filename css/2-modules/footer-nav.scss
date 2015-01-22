@@ -1,0 +1,91 @@
+
+.footer {
+    $footer-background: white;
+    $footer-color: desaturate(darken($base-accent-color, 20), 30);
+    $footer-link-color: transparentize($footer-color, .6);
+    $footer-disclaimer-color: transparentize($footer-color, .6);
+    background: $footer-background;
+    padding: $base-spacing*2 $gutter;
+    width: 100%;
+    
+    .footer-links {
+        @include outer-container;
+        .print{
+            @include span-columns(2);
+            @include media($large-screen);
+        }
+        .create{
+            @include span-columns(2);
+            @include media($large-screen);
+        }
+
+        .support{
+            @include span-columns(2);
+            @include shift(4);
+            @include media($large-screen);
+        }
+        li a{
+            color:#353738;
+        }
+        h5{
+            margin-bottom: 15px;
+        }
+
+    }
+
+    hr{
+        @include outer-container;
+    }
+
+     p {
+        color: $footer-disclaimer-color;
+        @include outer-container;
+    }
+
+    /*ul {
+        margin-bottom: $base-spacing*2;
+        @include media($medium-screen) {
+            @include span-columns(3);
+            @include omega(3n);
+            @include clearfix;
+        &.create{
+          margin-left:-180px;
+        }
+        &.support{
+          margin-left:100px;
+        }
+        }
+    }
+    li {
+        text-align: center;
+        @include media($medium-screen) {
+            text-align: left;
+        }
+    }
+    li a {
+        color: $footer-link-color;
+        &:hover {
+            color: transparentize($footer-color, 0);
+        }
+    }
+    li h3 {
+        color: $footer-color;
+        font-size: 1em;
+        font-weight: 800;
+        margin-bottom: .4em;
+    }
+    hr {
+        border: 1px solid transparentize($footer-disclaimer-color, .3);
+        margin: 0 auto $base-spacing;
+        width: 60em;
+    }
+    p {
+        color: $footer-disclaimer-color;
+        font-size: .9em;
+        line-height: 1.5em;
+        margin: auto;
+        max-width: 60em;
+        width:60em
+     
+    }*/
+}

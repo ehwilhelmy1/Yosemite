@@ -1,0 +1,259 @@
+.container-box {
+    $blockPadding: 50px 0;
+    $uppercase: uppercase;
+    @include outer-container;
+    .product-block {
+        padding: $base-spacing;
+    }
+    section {
+        @include outer-container;
+        $mobile: new-breakpoint(max-width 500px 4);
+        padding: $base-spacing;
+        .back {
+            @include span-columns(6);
+            @include media($mobile) {
+                @include span-columns(2);
+            }
+        }
+        .continue {
+            @include span-columns(6);
+            @include media($mobile) {
+                @include span-columns(2);
+            }
+        }
+        aside {
+            @include span-columns(6);
+            @include media($mobile) {
+                @include span-columns(4);
+            }
+        }
+        article {
+            @include span-columns(6);
+            margin-top: $base-spacing;
+            @include media($mobile) {
+                @include span-columns(4);
+            }
+            ul {
+                padding: .7em 1.25em 1.5em;
+                li {
+                    list-style-type: circle;
+                }
+            }
+        }
+        &.product-details {
+            padding: $base-spacing
+        }
+        &.product-steps {
+            padding: $base-spacing;
+            text-align: center;
+            .alpha {
+                @include span-columns(4);
+                @include shift(2);
+                padding: $base-spacing;
+                @include media($mobile) {
+                    @include span-columns(4);
+                    @include shift(0);
+                }
+            }
+            .beta {
+                @include span-columns(4);
+                padding: $base-spacing;
+                @include media($mobile) {
+                    @include span-columns(4);
+                }
+            }
+            h1 {}
+        }
+        hr {
+            margin: .6em 0px;
+        }
+        h5 {
+            font-weight: 900;
+        }
+        &.column-box {
+            padding: 3em;
+            background: white;
+            margin:3em 0em;
+        }
+        &.column {
+            
+            div#alpha {
+                @include span-columns(5.5);
+                 @include media($mobile) {
+        @include span-columns(4);
+      }
+                
+            }
+            div#beta {
+                @include span-columns(5.5);
+                @include media($mobile) {
+        @include span-columns(4);
+      }
+
+
+            }
+            div#gamma {
+                @include span-columns(12);
+                 @include media($mobile) {
+        @include span-columns(6);
+      }
+                
+            }
+            div#divider {
+                @include span-columns(1);
+                height: 400px;
+left: 35px;
+border-left: 1px solid #ccc;
+position:relative;
+@include media($mobile) {
+        display:none;
+      }
+
+            }
+
+        }
+    }
+    .sale {
+        color: $sale;
+    }
+    .from-pricing {
+        color: $sale;
+    }
+    figure {
+        margin: $base-spacing;
+    }
+}
+
+
+
+
+
+//PRINT OPTIONS PAGE LAYOUT STYLES //
+
+.print-Options-Wrap{
+    @include outer-container;
+    text-align:center;
+    margin:$base-spacing;
+        h2{
+        line-height: 3em;
+        }
+        button{
+        display: inline;
+        font-size: .8em;
+        text-transform: uppercase;
+        padding: .75em 1em;
+        @include media($medium-screen) {
+          width: auto;
+          margin-bottom: 0;
+        }
+    }
+
+    #availableProducts{
+    @include span-columns(8);
+    @include shift(2.5);
+        div{
+            margin:10px 0;
+            span{
+            width:90px;
+            @include ellipsis(50%);
+            font-weight:bold;
+            text-align:right;
+            
+            }
+            @include span-columns(4 of 8);
+            @include omega();
+            text-align:left;
+            input{
+                    display:inline;
+                    margin:0 .3em;
+                    vertical-align:top;
+            }
+            p{
+                display:inline;
+                vertical-align:top;
+            }
+        }   
+        div:nth-child(odd){
+            margin:10px 0;
+        span{
+            width:90px;
+            @include ellipsis(50%);
+            font-weight:bold;
+            text-align:right;
+            }
+            text-align:left;
+            @include span-columns(4 of 8);
+            @include omega();
+                input{
+                    display:inline;
+                    margin:0 .3em;
+                    vertical-align:top;
+            }
+            p{
+                display:inline;
+                vertical-align:top;
+            }
+        }   
+    }
+    #subtotal{
+        @include outer-container;
+        margin:20px 0;
+        clear:both;
+        font-weight:bold;
+    }
+    input.btn{
+        margin:0 .3em;
+    }
+
+    .button-group{
+     display:inline-block;
+    }
+}
+
+
+//PICKUP AND SHIP STYLES
+
+.product-steps{
+    h1{
+        text-align:center;
+    }
+}
+
+.product-steps {
+    .grid-items-lines{
+        text-align:center;
+        .grid-item{
+            background-color:#fff;
+            text-align:center;
+            float:none;
+            display:inline-block;
+            margin:20px 10px;
+        }
+    }
+    #zipCode{
+        width:100px;
+    }
+}
+
+/*.flash-alert{
+    @include outer-container;
+    text-align:center;
+}*/
+
+
+.mCustomScrollbar {
+@include outer-container;
+    width:800px;
+    .mCustomScrollBox {
+        width:800px;
+    }
+}
+
+
+/* Old Styles to be removed when bootstrap modals are removed */
+
+#userAgreement .modal-body,
+#privacyStatement .modal-body{
+    max-height:450px;
+    overflow:auto;
+}

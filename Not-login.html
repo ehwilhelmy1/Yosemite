@@ -1,0 +1,43 @@
+<!--NOT LOGIN -->
+
+
+<div class="navigation-tools">
+    <div class="modal-b n-link">
+        <label for="modal-1">
+            <div class="link js-btn">LOGIN</div>
+        </label>
+        <input class="modal-state" id="modal-1" type="checkbox" />
+        <div class="modal-window">
+            <div class="modal-inner">
+                <label class="modal-close" for="modal-1"></label>
+                <h1>Login to Your Account</h1>
+
+                <div id="loginContainer" runat="server">
+
+                    <form>
+                        <fieldset>
+                            <input type="text" size="25" id="emailAddy" autocomplete="off" placeholder="Email Address..." onkeypress="javascript: if (window.event.keyCode == 13){return false;}else{return true;}" runat="server" />
+
+                            <input type="password" autocomplete="off" placeholder="Password..." size="20" id="password" onkeypress="doClick('loginBtn',event);" runat="server" />
+                            <div class="submit">
+                                <input type="submit" value="Log in" />
+                                <div class="alert alert-error" id='warningBox' style="display: none;" runat="server">testing the warning!</div>
+                                <!--do we need this??<input type="checkbox" id="isGuest" name="isGuest" runat="server" style="display: block" /><input type="text" id="guestId" name="guestId" runat="server" style="display: none" />-->
+                            </div>
+                            <div class="forgot">
+                                <label><a href="/help/passwordfinder.aspx">Forgot?</a>
+                                </label>
+                            </div>
+                            <div class="remember-me">
+                                <input type="checkbox" id="rememberMe" name="rememberMe" runat="server" />
+                                <label>Remember Me</label>
+                            </div>
+                        </fieldset>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="javascript:void(0)" class="sign-up">Sign Up</a>
+</div>

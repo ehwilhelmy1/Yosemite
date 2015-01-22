@@ -1,0 +1,206 @@
+ <!-- START OF PAGE LAYOUT-->
+    <div class="container-box">
+        <!-- START OF PRODUCT STEPS - PICKUP OR SHIP-->
+        <section class="product-steps">
+            <h1>Choose a Delivery Method</h1>
+            <div class="grid-items-lines">
+                <a href="javascript:void(0)" class="grid-item alpha">
+
+
+                    <!-- MODAL FOR PICKUP-->
+                    <div class="modal-b n-link">
+                        <label for="modal-1">
+                            <div class="block js-btn">
+                                <h2>Pickup In-store</h2>
+
+                                <i class="fa fa-home fa-5x"></i>
+                            </div>
+                        </label>
+                        <input class="modal-state" id="modal-1" type="checkbox" />
+                        <div class="modal-window">
+                            <div class="modal-inner">
+                                <label class="modal-close" for="modal-1"></label>
+                                <h1>Find a Location Near You</h1>
+                                <form>
+                                    <h4>Search by State & City:</h4>
+                                    <p>
+                                        <label for="select_element">State:</label>
+                                        <select name="select_element">
+                                            <optgroup label="State">
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                                <option value="3">Option 3</option>
+                                            </optgroup>
+                                        </select>
+                                    </p>
+                                    <p>
+                                        <label for="select_element">City:</label>
+                                        <select name="select_element">
+                                            <optgroup label="City">
+                                                <option value="1">Option 1</option>
+                                                <option value="2">Option 2</option>
+                                                <option value="3">Option 3</option>
+                                            </optgroup>
+                                        </select>
+                                    </p>
+                                    <p>
+
+                                        <!--MODAL CHOOSE A STORE BY STATE/CITTY-->
+                                        <div class="modal-b n-link">
+                                            <label for="modal-2">
+                                                <div class="btn js-btn">FIND</div>
+                                            </label>
+                                            <input class="modal-state" id="modal-2" type="checkbox" />
+                                            <div class="modal-window">
+                                                <div class="modal-inner">
+                                                    <label class="modal-close" for="modal-2"></label>
+                                                    <h1>Order Prints</h1>
+                                                    <form>
+                                                        <p>
+                                                            <h4>Select a Location</h4>
+                                                            <table class="table-borders">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Store Name</th>
+                                                                        <th>Address</th>
+                                                                        <th>Phone</th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><b>Mike's Camera Boulder</b>
+                                                                        </td>
+                                                                        <td>2500 Pearl Street BoulderCO 80302
+                                                                        </td>
+                                                                        <td>(303) 443-1715</td>
+                                                                        <td>
+                                                                            <button>Choose Store</button>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td><b>Mike's Camera Boulder</b>
+                                                                        </td>
+                                                                        <td>2500 Pearl Street BoulderCO 80302
+                                                                        </td>
+                                                                        <td>(303) 443-1715</td>
+                                                                        <td>
+                                                                            <button>Choose Store</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </p>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--END CHOOSE A STORE-->
+                                    </p>
+                                </form>
+                                <hr>
+
+                                <em>OR</em>
+
+                                <hr>
+                                <form>
+                                    <h4>Search by Zipcode:</h4>
+                                    <p>
+                                        <label for="select_element">Show results within miles:</label>
+                                        <select name="select_element">
+                                            <optgroup label="Miles">
+                                                <option value="1">5</option>s
+                                                <option value="2">10</option>
+                                                <option value="3">50</option>
+                                            </optgroup>
+                                        </select>
+
+                                    </p>
+                                    <p>
+                                        <label for="zipcode">Zipcode:</label>
+                                        <input type="zipcode" class="zipcode" name="zipcode">
+                                    </p>
+                                    <p>
+
+
+                                        <!--MODAL CHOOSE A STORE BY ZIPCODE-->
+                                        <div class="modal-b n-link">
+                                            <label for="modal-3">
+                                                <div class="btn js-btn">FIND</div>
+                                            </label>
+                                            <input class="modal-state" id="modal-3" type="checkbox" />
+                                            <div class="modal-window">
+                                                <div class="modal-inner">
+                                                    <label class="modal-close" for="modal-3"></label>
+                                                     <h1>Order Prints</h1>
+                                                    <form>
+                                                        <p>
+                                                            <h4>Select a Location</h4>
+                                                            <table class="table-borders">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Store Name</th>
+                                                                        <th>Address</th>
+                                                                        <th>Phone</th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><b>Mike's Camera Boulder</b>
+                                                                        </td>
+                                                                        <td>2500 Pearl Street BoulderCO 80302
+                                                                        </td>
+                                                                        <td>(303) 443-1715</td>
+                                                                        <td>
+                                                                            <button>Choose Store</button>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td><b>Mike's Camera Boulder</b>
+                                                                        </td>
+                                                                        <td>2500 Pearl Street BoulderCO 80302
+                                                                        </td>
+                                                                        <td>(303) 443-1715</td>
+                                                                        <td>
+                                                                            <button>Choose Store</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </p>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--END CHOOSE A STORE-->
+                                    </p>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--END MODAL OR PICKUP-->
+
+
+                </a>
+                <a href="javascript:void(0)" class="grid-item beta">
+                    <h2>Ship to Store</h2>
+
+                    <i class="fa fa-truck fa-5x"></i>
+                </a>
+            </div>
+        </section>
+        <!--END PRODUCT STEPS-->
+        <section class="nav-buttons">
+            <div class="back">
+                <button class="secondary">BACK</button>
+            </div>
+            <div class="continue">
+                <button class="primary">CONTINUE</button>
+            </div>
+        </section>
+    </div>
+    <!-- END OF PAGE LAYOUT-->

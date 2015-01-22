@@ -1,0 +1,70 @@
+
+
+
+//flex boxes
+
+$flex-box-border-color: $light-gray;
+$flex-box-background: lighten($light-gray, 10);
+$flex-box-gutter: .8em;
+$flex-box-width: 18em;
+$flex-box-color: transparentize($base-font-color, .3);
+$flex-box-top-colors: 
+
+  #72BFBF;
+
+
+.flex-boxes {
+  @include clearfix;
+  @include display(flex);
+  @include justify-content(center);
+  @include align-items(stretch);
+  @include flex-wrap(wrap);
+  text-align: center;
+}
+
+.flex-box {
+  @include transition (all 0.2s ease-in-out);
+  @include flex(2 2 15em);
+  @include align-self(stretch);
+  display: block;
+  border-radius: $base-border-radius;
+  margin: $flex-box-gutter;
+  padding: 1.4em;
+  background: $flex-box-background;
+
+  @for $i from 1 to 7 { // assign colors from $flex-box-top-colors list
+    &:nth-child(#{$i}) {
+      $color-from-list: $flex-box-top-colors;
+     
+      
+      &:hover {
+        background-color: transparentize($color-from-list, .9);
+      }
+    }
+  }
+}
+
+.flex-box img {
+  display: block;
+  height: auto;
+  margin: auto;
+  margin-bottom: 2em;
+}
+.flex-bottom{text-align:left}
+.flex-box .flex-title {
+  color: $flex-box-color;
+  font-family: $serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  margin-bottom: .5em;
+}
+
+.flex-box p {
+  margin: auto;
+  line-height: 1.5em;
+  color: transparentize($flex-box-color, .1);
+}
+
+.flex-box-big {
+  @include flex(1 1 30em);
+}

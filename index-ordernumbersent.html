@@ -1,0 +1,273 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Example - Bourdon</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,900,800' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <!-- Modernizr -->
+</head>
+
+
+<body>
+
+    <header class="navigation info">
+        <div class="navigation-wrapper">
+
+
+            <div class="help-tools">
+                <ul id="info-menu">
+                    <li class="info-link"><a href="javascript:void(0)">Find a Store</a>
+                    </li>
+                    <li class="info-link"><a href="#">Live Help</a>
+                    </li>
+                    <li class="info-link"><a href="#">Track Orders</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <header class="navigation">
+        <div class="navigation-wrapper">
+            <a href="javascript:void(0)" class="logo">
+                <img src="img/logo-1.jpg" alt="Logo Image">
+            </a>
+            <a href="#navigation-menu" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+            <div class="nav">
+                <ul id="navigation-menu">
+                    <li class="nav-link"><a href="javascript:void(0)">Print</a>
+                    </li>
+                    <li class="nav-link more"><a href="javascript:void(0)">Create</a>
+                        <ul class="submenu">
+                            <li><a href="javascript:void(0)"><h5>PERSONALIZE YOUR PHOTO</h5></a>
+                            </li>
+                            <li><a href="javascript:void(0)">Photobooks</a>
+                            </li>
+                            <li><a href="javascript:void(0)">Photo Gifts</a>
+                            </li>
+                            <li><a href="javascript:void(0)">Calendars</a>
+                            </li>
+                            <li><a href="javascript:void(0)">Wall Decor</a>
+                            </li>
+                            <li><a href="javascript:void(0)">Home Decor</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation-tools">
+             <!--   <div class="nav">
+                    <ul id="navigation-menu">
+
+                        <li class="nav-link more"><a href="javascript:void(0)">Hi, Erica</a>
+                            <ul class="submenu">
+                                <li><a href="javascript:void(0)"><h5>My Account</h5></a>
+                                </li>
+                                <ul>
+
+                                    <li><a href="javascript:void(0)">My Photos</a>
+                                    </li>
+                                    <li><a href="javascript:void(0)">My Orders</a>
+                                    </li>
+                                    <li><a href="javascript:void(0)">My Deals</a>
+                                    </li>
+                                    <li><a href="javascript:void(0)">My Photo Books</a>
+                                    </li>
+                                    <li><a href="javascript:void(0)">My Cards</a>
+                                    </li>
+                                    <li><a href="javascript:void(0)">My Calendars</a>
+                                    </li>
+                                    <li><a href="javascript:void(0)">My Gifts</a>
+                                    </li>
+                                </ul>
+                                <li><a href="javascript:void(0)">Upload Photos</a>
+                                </li>
+                                <li><a href="javascript:void(0)">Log out</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-link"><a href="javascript:void(0)">$15.00</a>
+                        </li>
+                    </ul>
+                </div>
+-->
+
+            
+  <label for="modal-1">
+    <div class="link js-btn" style="padding: 16px;">LOGIN</div>
+  </label>
+           
+
+               
+                  <a href="javascript:void(0)" class="sign-up">Sign Up</a>
+
+            </div>
+<div class="modal-b n-link">
+  <input class="modal-state" id="modal-1" type="checkbox" />
+  <div class="modal-window">
+    <div class="modal-inner">
+      <label class="modal-close" for="modal-1"></label>
+      <h1>Login to Your Account</h1>
+      
+                            <div id="loginContainer" runat="server">
+
+                                <form>
+                                    <fieldset>
+                                        <input type="text" size="25" id="emailAddy" autocomplete="off" placeholder="Email Address..." onkeypress="javascript: if (window.event.keyCode == 13){return false;}else{return true;}" runat="server" />
+
+                                        <input type="password" autocomplete="off" placeholder="Password..." size="20" id="password" onkeypress="doClick('loginBtn',event);" runat="server" />
+
+
+                                        <div class="submit">
+                                            <input type="submit" value="Log in" />
+                                            <div class="alert alert-error" id='warningBox' style="display: none;" runat="server">testing the warning!</div>
+                                           
+                                        </div>
+                                        <div class="forgot">
+                                            <label><a href="/help/passwordfinder.aspx">Forgot?</a>
+                                            </label>
+                                        </div>
+                                        <div class="remember-me">
+                                            <input type="checkbox" id="rememberMe" name="rememberMe" runat="server" />
+                                            <label>Remember Me</label>
+                                        </div>
+                                    </fieldset>
+                                </form>
+
+                            </div>
+    </div>
+  </div>
+</div>
+    </header>
+
+
+    <div class="container-box">
+
+        <section class="column column-box ">
+
+            <div id="gamma">
+                <div class="cd-form"><h3>YOUR ORDER NUMBER HAS BEEN SENT</h3>
+                <p>Please check the email submitted for your Order Number.</p>
+                
+
+
+                    
+
+                  
+                    
+
+
+                    <p class="fieldset">
+                        <a href="index-trackmyorder.html"><input class="full-width has-padding" type="submit" value="TRACK MY ORDER"></a>
+                    </p>
+                    </fieldset>
+                </div>
+            </div>
+
+        </section>
+
+
+    </div>
+
+    <footer class="footer">
+
+        <div class="footer-links">
+            <ul class="print">
+                <li>
+                    <h5>PRINT</h5>
+                </li>
+                <li><a href="javascript:void(0)">Prints</a>
+                </li>
+                <li><a href="javascript:void(0)">Enlargements</a>
+                </li>
+                <li><a href="javascript:void(0)">Package Prints</a>
+                </li>
+            </ul>
+            <ul class="create">
+                <li>
+                    <h5>CREATE</h5>
+                </li>
+                <li><a href="javascript:void(0)">Photobooks</a>
+                </li>
+                <li><a href="javascript:void(0)">Cards</a>
+                </li>
+                <li><a href="javascript:void(0)">Gifts</a>
+                </li>
+                <li><a href="javascript:void(0)">Home Decor</a>
+                </li>
+                <li><a href="javascript:void(0)">Wall Decor</a>
+                </li>
+            </ul>
+            <ul class="support">
+                <li>
+                    <h5>SUPPORT</h5>
+                </li>
+                <li><a href="javascript:void(0)">Terms and Conditions</a>
+                </li>
+                <li><a href="javascript:void(0)">Privacy Policy</a>
+                </li>
+                <li><a href="javascript:void(0)">FAQs</a>
+                </li>
+                <li><a href="javascript:void(0)">Track Order</a>
+                </li>
+                <li><a href="javascript:void(0)">Live Help</a>
+                </li>
+            </ul>
+
+        </div>
+        <hr>
+
+
+        <p>
+            Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.</p>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Gem jQuery -->
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+    var menu = $('#navigation-menu');
+    var menuToggle = $('#js-mobile-menu');
+    var signUp = $('.sign-up');
+
+    $(menuToggle).on('click', function(e) {
+        e.preventDefault();
+        menu.slideToggle(function() {
+            if (menu.is(':hidden')) {
+                menu.removeAttr('style');
+            }
+        });
+    });
+
+    // underline under the active nav item
+    $(".nav .nav-link").click(function() {
+        $(".nav .nav-link").each(function() {
+            $(this).removeClass("active-nav-item");
+        });
+        $(this).addClass("active-nav-item");
+        $(".nav .more").removeClass("active-nav-item");
+    });
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".dropdown-link").click(function() {
+        $(".dropdown-menu").toggleClass("show-menu");
+        $(".dropdown-menu > li").click(function() {
+            $(".dropdown-menu").removeClass("show-menu");
+        });
+        $(".dropdown-menu.dropdown-select > li").h(function() {
+            $(".dropdown-link").html($(this).html());
+        });
+    });
+});
+</script>
+
+</body>
+
+</html>

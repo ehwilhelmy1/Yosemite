@@ -1,0 +1,657 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Yosemite</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,900,800' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <style type="text/css">.clearfix{clear:both;}</style>
+    <script src="js/jquery.mobile.stepper.js"></script>
+    <!-- Modernizr -->
+</head>
+
+<body>
+    <header class="navigation info">
+
+
+
+        <div class="help-tools">
+            <ul id="info-menu">
+
+                <li class="info-link"><a href="javascript:void(0)">Find a Store</a>
+                </li>
+                <li class="info-link"><a href="#">Live Help</a>
+                </li>
+                <li class="info-link"><a href="#">Track Orders</a>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+    <header class="cd-main-header">
+        <a class="cd-logo" href="#0"><img src="img/logo-1.jpg" alt="Logo">
+        </a>
+
+        <ul class="cd-header-buttons">
+            <!--<li><a class="cd-search-trigger" href="#cd-search">Search<span></span></a>
+            </li>-->
+            <li><a class="cd-nav-trigger" href="#cd-primary-nav">Menu<span></span></a>
+            </li>
+
+        </ul>
+        <!-- cd-header-buttons -->
+    </header>
+
+
+   
+
+        <!-- put your content here -->
+
+
+        <div class="container-box">
+
+            <script type="text/javascript">
+            var currencySymbol = '$';
+
+            $(document).ready(function() {
+                var shopperID = '3683898';
+                var finishes = ['Glossy', 'Matte', 'Lustre'];
+                var productsByFinish = {
+                    'Glossy': [{
+                        'ProductID': '1389',
+                        'MerchantProductID': '391262',
+                        'Name': '5x7 Print',
+                        'RawPrice': '2.99',
+                        'Price': '$2.99 each',
+                        'Width': '7.0000',
+                        'Height': '5.0000',
+                        'SquareInchArea': '35.00000000'
+                    }, {
+                        'ProductID': '1390',
+                        'MerchantProductID': '414824',
+                        'Name': '8x10 Print',
+                        'RawPrice': '4.99',
+                        'Price': '$4.99 each',
+                        'Width': '10.0000',
+                        'Height': '8.0000',
+                        'SquareInchArea': '80.00000000'
+                    }, {
+                        'ProductID': '1391',
+                        'MerchantProductID': '395479',
+                        'Name': '8x12 Print',
+                        'RawPrice': '1.99',
+                        'Price': '$1.99 each',
+                        'Width': '12.0000',
+                        'Height': '8.0000',
+                        'SquareInchArea': '96.00000000'
+                    }, {
+                        'ProductID': '1394',
+                        'MerchantProductID': '397259',
+                        'Name': '16x20 Print',
+                        'RawPrice': '19.99',
+                        'Price': '$19.99 each',
+                        'Width': '20.0000',
+                        'Height': '16.0000',
+                        'SquareInchArea': '320.00000000'
+                    }, {
+                        'ProductID': '1406',
+                        'MerchantProductID': '391271',
+                        'Name': '3x5 Print',
+                        'RawPrice': '0.19',
+                        'Price': '$0.19 each',
+                        'Width': '5.0000',
+                        'Height': '3.0000',
+                        'SquareInchArea': '15.00000000'
+                    }],
+                    'Matte': [{
+                        'ProductID': '1389',
+                        'MerchantProductID': '391262',
+                        'Name': '5x7 Print',
+                        'RawPrice': '2.99',
+                        'Price': '$2.99 each',
+                        'Width': '7.0000',
+                        'Height': '5.0000',
+                        'SquareInchArea': '35.00000000'
+                    }, {
+                        'ProductID': '1391',
+                        'MerchantProductID': '395479',
+                        'Name': '8x12 Print',
+                        'RawPrice': '1.99',
+                        'Price': '$1.99 each',
+                        'Width': '12.0000',
+                        'Height': '8.0000',
+                        'SquareInchArea': '96.00000000'
+                    }, {
+                        'ProductID': '1394',
+                        'MerchantProductID': '397259',
+                        'Name': '16x20 Print',
+                        'RawPrice': '19.99',
+                        'Price': '$19.99 each',
+                        'Width': '20.0000',
+                        'Height': '16.0000',
+                        'SquareInchArea': '320.00000000'
+                    }, {
+                        'ProductID': '1406',
+                        'MerchantProductID': '391271',
+                        'Name': '3x5 Print',
+                        'RawPrice': '0.19',
+                        'Price': '$0.19 each',
+                        'Width': '5.0000',
+                        'Height': '3.0000',
+                        'SquareInchArea': '15.00000000'
+                    }],
+                    'Lustre': [{
+                        'ProductID': '1390',
+                        'MerchantProductID': '414824',
+                        'Name': '8x10 Print',
+                        'RawPrice': '4.99',
+                        'Price': '$4.99 each',
+                        'Width': '10.0000',
+                        'Height': '8.0000',
+                        'SquareInchArea': '80.00000000'
+                    }]
+                };
+                var selectedProducts = [];
+
+                //console.log(finishes);
+                //console.log(productsByFinish);
+
+                var finishButton = "<div class='button-group'>";
+                var renderFinishButtons = function() {
+                    finishes.forEach(function(finish) {
+                        var button = ""; //"<label><input type='radio' id='" + finish + "' name='button-group' value='" + finish + "'>";
+                        if (($("#selectedFinish").val() == undefined || $("#selectedFinish").val() == '') && finish == 'Matte') {
+                            var button = "<label><input type='radio' id='" + finish + "' name='button-group' value='" + finish + "' checked>";
+                            //$("#" + finish).attr('checked');
+                        } else {
+                            var button = "<label><input type='radio' id='" + finish + "' name='button-group' value='" + finish + "'>";
+                        }
+                        button += "<span class='button-group-item'>" + finish + "</span>";
+                        button += "</label>";
+                        finishButton += button;
+                    });
+                    finishButton += "</div>"
+                    $("#finish-Buttons").append(finishButton);
+                }
+
+                var unselectFinishButtons = function() {
+                    finishes.forEach(function(finish) {
+                        $("#" + finish).removeClass("selected");
+                    });
+                }
+
+                var renderPrintSizes = function(finish) {
+                    resetSubtotal();
+
+                    $("#selectedFinish").val(finish);
+                    var productsSelectedFinish = productsByFinish[finish];
+                    //console.log(productsSelectedFinish);
+
+                    $("#availableProducts").empty();
+                    productsSelectedFinish.forEach(function(product, idx) {
+                        var textbox = renderSizeQtyTextbox(product.MerchantProductID, product.RawPrice);
+                        var product = $('<div/>', {
+                            html: "<span>" + product.Name + "</span>" + textbox + "<p> @" + product.Price + "</p>"
+                        });
+
+                        $("#availableProducts").append(product);
+                    });
+                }
+
+                var getSelectedProducts = function() {
+                    selectedProducts.length = 0;
+                    $('#form1 *').filter(':input').each(function() {
+                        var inputID = $(this).attr('id');
+
+                        if (inputID !== undefined && inputID.indexOf('print_') > -1 && inputID.indexOf('_price') < 0) {
+
+                            var printQty = $(this).val();
+                            if (printQty !== null && printQty > 0) {
+                                selectedProducts.push($(this).attr('name') + ":" + printQty);
+                            }
+                        }
+                    });
+                    //console.log(selectedProducts);
+                    event.preventDefault();
+                }
+
+                var renderSizeQtyTextbox = function(productID, productPrice) {
+                    var textbox = "<input type='textbox' id='print_" + productID + "' name='print_" + productID + "' size='3' onkeyup='updateSubtotal();'>" +
+                        "<input type='hidden' id='print_" + productID + "_price' value='" + productPrice + "'>";
+
+                    return textbox;
+                }
+
+                var resetSubtotal = function() {
+                    $('#subtotal').empty();
+                }
+
+                renderFinishButtons();
+
+                $('input:radio[name=button-group]').click(function() {
+                    renderPrintSizes(this.value);
+                });
+
+                // render a default product set                
+                if (finishes.indexOf('Matte') > -1) {
+                    renderPrintSizes('Matte');
+                }
+
+                $("#_reset").click(resetSubtotal);
+
+                $("#back").click(function() {
+                    history.back();
+                });
+            });
+
+            Number.prototype.formatMoney = function(c, d, t) {
+                var n = this,
+                    c = isNaN(c = Math.abs(c)) ? 2 : c,
+                    d = d == undefined ? "." : d,
+                    t = t == undefined ? "," : t,
+                    s = n < 0 ? "-" : "",
+                    i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
+                    j = (j = i.length) > 3 ? j % 3 : 0;
+                return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+            };
+
+            var updateSubtotal = function() {
+                $('#subtotal').empty();
+                $('#numPrints').empty();
+
+                var subtotal = 0;
+                var printQty = 0;
+                var numberOfImages = 1;
+                var numberOfPrints = 0;
+
+                $('#form1 *').filter(':input').each(function() {
+                    var inputID = $(this).attr('id');
+                    if (inputID !== undefined && inputID.indexOf('print_') > -1 && inputID.indexOf('_price') < 0) {
+                        printQty = $(this).val();
+
+                        validateForm(printQty, inputID);
+
+                        if (printQty !== undefined && printQty > 0) {
+                            numberOfPrints += parseInt(printQty);
+                            //var subtotal = $('#subtotal').val() == undefined ? 0 : subtotal;
+                            var price = $('#' + $(this).attr('id') + "_price").val();
+                            subtotal += ((printQty * numberOfImages) * price);
+                        }
+                    }
+                });
+
+                var printNoun = "print";
+                var imageNoun = "image";
+
+                if (numberOfPrints > 1) {
+                    printNoun += "s";
+                }
+                if (numberOfImages > 1) {
+                    imageNoun += "s";
+                }
+                $('#subtotal').append("Subtotal: " + currencySymbol + subtotal.formatMoney(2));
+                $('#numPrints').append(numberOfPrints + " " + printNoun + " of " + numberOfImages + " " + imageNoun + " in your cart.");
+            }
+
+            var validateForm = function(value, inputID) {
+                $("#flash-error").remove();
+                if (value !== undefined) {
+                    var y = parseInt(value, 999)
+                    var i = 1000;
+                    if (isNaN(value) || y > i) {
+                        var qtyAlert = "You must enter a numeric value between 0 and 1000";
+                        var alertDiv = $("<div id='flash-error' class='flash-error'>").append(qtyAlert);
+                        if (isNaN(value) || y > i) {
+
+                            $("#availableProducts").before(alertDiv);
+                            //alert("You must select a numeric value between 0 and 1000");
+                            $("#" + inputID).focus();
+                            return false;
+                        }
+                    }
+                }
+            }
+            </script>
+            <div class="print-Options-Wrap">
+                <section>
+                    <h2>1. Select Finish</h2>
+                    <div class="clearfix"></div>
+                    <div id="finish-Buttons">
+                        <div class="button-group">
+                            <label>
+                                <input type="radio" id="Glossy" name="button-group" value="Glossy"><span class="button-group-item">Glossy</span>
+                            </label>
+                            <label>
+                                <input type="radio" id="Matte" name="button-group" value="Matte" checked=""><span class="button-group-item">Matte</span>
+                            </label>
+                            <label>
+                                <input type="radio" id="Lustre" name="button-group" value="Lustre"><span class="button-group-item">Lustre</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <h2>2. Select a Size &amp; Quantity</h2>
+                    <div id="availableProducts" class="flex-boxes">
+                        <div><span>5x7 Print</span>
+                            <input type="textbox" id="print_391262" name="print_391262" size="3" onkeyup="updateSubtotal();">
+                            <input type="hidden" id="print_391262_price" value="2.99">
+                            <p> @$2.99 each</p>
+                            <div data-role="content">
+        <h2>Horizontal</h2>
+        <form>
+            <div data-role="stepper" data-theme="d"><input type="text" name="stepper1" id="stepper1" class="quantity" value="1" min="1" max="20" size="2" data-role="none" /></div>
+        </form>
+        <h2>Vertical</h2>
+        <form>
+            <div data-role="stepper" data-theme="d" data-direction="vertical"><input type="text" name="stepper2" id="stepper2" class="quantity" value="0" min="0" max="10" size="2" data-role="none" /></div>
+        </form>
+    </div>
+                        </div>
+                        <div><span>8x12 Print</span>
+                            <input type="textbox" id="print_395479" name="print_395479" size="3" onkeyup="updateSubtotal();">
+                            <input type="hidden" id="print_395479_price" value="1.99">
+                            <p> @$1.99 each</p>
+                        </div>
+                        <div><span>16x20 Print</span>
+                            <input type="textbox" id="print_397259" name="print_397259" size="3" onkeyup="updateSubtotal();">
+                            <input type="hidden" id="print_397259_price" value="19.99">
+                            <p> @$19.99 each</p>
+                        </div>
+                        <div><span>3x5 Print</span>
+                            <input type="textbox" id="print_391271" name="print_391271" size="3" onkeyup="updateSubtotal();">
+                            <input type="hidden" id="print_391271_price" value="0.19">
+                            <p> @$0.19 each</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <h5> <div id="numPrints">1 print of 1 image in your cart.</div></h5>
+
+                    <h3><div id="subtotal">Subtotal: $2.99</div></h3>
+                    <input type="hidden" id="selectedFinish" name="selectedFinish" value="Matte">
+                    <!-- <input class="btn secondary" type="reset" id="_reset" value="Clear Selections" />-->
+
+                </section>
+                <section>
+                    <div class="back">
+                        <button class="secondary" id="back">BACK</button>
+                    </div>
+                    <div class="continue">
+                        <!--<input class="btn secondary" type="reset" id="_reset" value="Clear Selections" />-->
+                        <input type="submit" name="ctl00$MainContent$ctl00" value="CONTINUE" class="btn primary">
+                    </div>
+
+                </section>
+            </div>
+
+
+        </div>
+
+   
+    <!-- cd-main-content -->
+
+    <div class="cd-overlay"></div>
+
+    <nav class="cd-nav">
+        <ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
+            <li class="has-children">
+                <a href="./">Prints</a>
+                <ul class="cd-secondary-nav is-hidden">
+                    <li class="go-back"><a href="#0">Menu</a>
+                    </li>
+                    <li class="see-all"><a href="./">Upload Photos</a>
+                    </li>
+                    <li class="has-children">
+                        <a href="./">Personalize Your Photos</a>
+                        <ul class="is-hidden">
+                            <li class="go-back">
+                                <a href="#0">Prints</a>
+                            </li>
+                            <li class="see-all">
+                                <a href="./">Upload Photos</a>
+                            </li>
+                            <li>
+                                <a href="#0">CDS</a>
+                            </li>
+                            <li class="has-children">
+                                <a href="#0">Collages</a>
+                            </li>
+                            <li>
+                                <a href="./">Prints</a>
+                            </li>
+                            <li>
+                                <a href="./">Photo Restoration</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+
+           
+
+
+            <li class="has-children">
+                <a href="./">Create</a>
+                <ul class="cd-secondary-nav is-hidden">
+                    <li class="go-back">
+                        <a href="#0">Menu</a>
+                    </li>
+                    <li class="see-all">
+                        <a href="./">Upload Photos</a>
+                    </li>
+                    <li>
+                        <a href="./">Create</a>
+                        <ul class="is-hidden">
+                            <li class="go-back">
+                                <a href="#0">Create</a>
+                            </li>
+                            <li class="see-all">
+                                <a href="./">Upload Photos</a>
+                            </li>
+                            <li>
+                                <a href="#0">Photobooks</a>
+                            </li>
+                            <li>
+                                <a href="#0">Cards</a>
+                            </li>
+                            <li>
+                                <a href="./">Gifts</a>
+                            </li>
+                            <li>
+                                <a href="./">Home Decor</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li id="navigation-tools" class="has-children">
+                <!-- sign in-->
+                <div class="login-account">
+                    <label for="modal-1">
+                        <div class="link js-btn">LOGIN</div>
+                    </label>
+                    <button>Sign Up</button>
+                </div>
+                <!--end sign in-->
+                <!-- signed in
+                
+                                    <a class="account-items" href="./">Hi, Erica</a>
+                                    <ul class="cd-secondary-nav is-hidden">
+                                        <li class="go-back">
+                                            <a href="#0">Menu</a>
+                                        </li>
+                                        <li class="see-all">
+                                            <a href="./">Log Out</a>
+                                        </li>
+                                        <li>
+                                            <a href="./">My Account</a>
+                                            <ul class="is-hidden">
+                                                <li class="go-back">
+                                                    <a href="#0">Menu</a>
+                                                </li>
+                                                <li class="see-all">
+                                                    <a href="./">Log Out</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0">My Photos</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0">My Account</a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">My Gifts</a>
+                                                </li>
+                                                <li>
+                                                    <a href="./">My Orders</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                -->
+                <!--end signed in
+            </li>
+            <div id="cd-cart-trigger"><a class="cd-img-replace" href="#0">$23.99</a></div>-->
+        </ul>
+        <!-- primary-nav -->
+
+    </nav>
+    <!-- cd-nav -->
+
+    <div class="modal-b n-link">
+        <input class="modal-state" id="modal-1" type="checkbox" />
+        <div class="modal-window">
+            <div class="modal-inner">
+                <label class="modal-close" for="modal-1"></label>
+                <h1>Login to Your Account</h1>
+
+                <div id="loginContainer" runat="server">
+
+                    <form>
+                        <fieldset>
+                            <input type="text" size="25" id="emailAddy" autocomplete="off" placeholder="Email Address..." onkeypress="javascript: if (window.event.keyCode == 13){return false;}else{return true;}" runat="server" />
+
+                            <input type="password" autocomplete="off" placeholder="Password..." size="20" id="password" onkeypress="doClick('loginBtn',event);" runat="server" />
+
+
+                            <div class="submit">
+                                <input type="submit" value="Log in" />
+                                <div class="alert alert-error" id='warningBox' style="display: none;" runat="server">testing the warning!</div>
+
+                            </div>
+                            <div class="forgot">
+                                <label><a href="/help/passwordfinder.aspx">Forgot?</a>
+                                </label>
+                            </div>
+                            <div class="remember-me">
+                                <input type="checkbox" id="rememberMe" name="rememberMe" runat="server" />
+                                <label>Remember Me</label>
+                            </div>
+                        </fieldset>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+
+        <div class="footer-links">
+            <ul class="print">
+                <li>
+                    <h5>PRINT</h5>
+                </li>
+                <li><a href="javascript:void(0)">Prints</a>
+                </li>
+                <li><a href="javascript:void(0)">Enlargements</a>
+                </li>
+                <li><a href="javascript:void(0)">Package Prints</a>
+                </li>
+            </ul>
+            <ul class="create">
+                <li>
+                    <h5>CREATE</h5>
+                </li>
+                <li><a href="javascript:void(0)">Photobooks</a>
+                </li>
+                <li><a href="javascript:void(0)">Cards</a>
+                </li>
+                <li><a href="javascript:void(0)">Gifts</a>
+                </li>
+                <li><a href="javascript:void(0)">Home Decor</a>
+                </li>
+                <li><a href="javascript:void(0)">Wall Decor</a>
+                </li>
+            </ul>
+            <ul class="support">
+                <li>
+                    <h5>SUPPORT</h5>
+                </li>
+                <li><a href="javascript:void(0)">Terms and Conditions</a>
+                </li>
+                <li><a href="javascript:void(0)">Privacy Policy</a>
+                </li>
+                <li><a href="javascript:void(0)">FAQs</a>
+                </li>
+                <li><a href="javascript:void(0)">Track Order</a>
+                </li>
+                <li><a href="javascript:void(0)">Live Help</a>
+                </li>
+            </ul>
+
+        </div>
+        <hr>
+
+
+        <p>
+            Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.</p>
+    </footer>
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Resource jQuery -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var menu = $('#navigation-menu');
+        var menuToggle = $('#js-mobile-menu');
+        var signUp = $('.sign-up');
+
+
+        $(menuToggle).on('click', function(e) {
+            e.preventDefault();
+            menu.slideToggle(function() {
+                if (menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+
+        // underline under the active nav item
+        $(".nav .nav-link").click(function() {
+            $(".nav .nav-link").each(function() {
+                $(this).removeClass("active-nav-item");
+            });
+            $(this).addClass("active-nav-item");
+            $(".nav .more").removeClass("active-nav-item");
+        });
+    });
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $(".dropdown-link").click(function() {
+            $(".dropdown-menu").toggleClass("show-menu");
+            $(".dropdown-menu > li").click(function() {
+                $(".dropdown-menu").removeClass("show-menu");
+            });
+            $(".dropdown-menu.dropdown-select > li").h(function() {
+                $(".dropdown-link").html($(this).html());
+            });
+        });
+    });
+    </script>
+</body>
+
+</html>
